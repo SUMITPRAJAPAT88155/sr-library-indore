@@ -278,7 +278,7 @@ body.dark .hero-overlay {
 @media (max-width: 768px) {
   .hero {
     min-height: calc(100vh - 60px);
-    background-size: contain;
+    
   }
 
   .hero-content h1 {
