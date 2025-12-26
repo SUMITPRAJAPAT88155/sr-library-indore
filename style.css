@@ -37,7 +37,6 @@ body {
   left: 0;
   width: 100%;
   z-index: 1000;
-
   background-color: #ffffff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
@@ -95,7 +94,6 @@ body {
 
 /* underline hover */
 .nav-links a::after {
-  content: "";
   position: absolute;
   left: 0;
   bottom: -5px;
@@ -112,7 +110,6 @@ body {
 .nav-links a:hover::after {
   width: 100%;
 }
-
 /* ===============================
    DARK MODE TOGGLE
 ================================ */
@@ -183,8 +180,6 @@ body.dark #dark-toggle {
   position: relative;
   height: 20px;
   width: 100%;
-  
-  /* background: url("hero-imge/newimg1.jpg") center/cover no-repeat; */
   min-height: calc(100vh - 30px);
   display: flex;
   align-items: center;
@@ -196,10 +191,6 @@ body.dark #dark-toggle {
   background-repeat: no-repeat;
   transition: background-image 1s ease-in;
 }
-
-
-
-
 /* dark overlay */
 .hero-overlay {
   position: absolute;
@@ -387,7 +378,6 @@ body.dark .hero-overlay {
 
   
 }
-
 .enquiry-btn:hover {
   background: #1ebe5d;
 }
@@ -547,10 +537,14 @@ body.dark .offer-btn {
 
 /* Timer */
 .offer-timer {
-  margin-top: 40px;
+  margin-top: 15px;
   font-size: 18px;
   font-weight: 600;
   color: #dc2626;
+  background: #fff7ed;
+  padding: 10px 18px;
+  border-radius: 8px;
+  display: inline-block;
 }
 
 body.dark .offer-timer {
@@ -563,10 +557,6 @@ body.dark .offer-timer {
     font-size: 26px;
   }
 }
-
-
-
-
 /* ===============================
    DARK MODE SUPPORT
 ================================ */
@@ -594,8 +584,6 @@ body.dark .library-note {
 body.dark .library-note li {
   color: #e5e7eb;
 }
-
-
 /* ===============================
    RESPONSIVE (TABLET)
 ================================ */
@@ -663,7 +651,6 @@ body.dark .library-note li {
 /* ===============================
    GALLERY SECTION
 ================================ */
-/* ===== GALLERY ===== */
 .gallery {
   padding: 80px 20px;
   text-align: center;
@@ -736,10 +723,6 @@ body.dark .gallery {
     height: 180px;
   }
 }
-
-
-
-
 /* ===============================
    DARK MODE
 ================================ */
@@ -875,6 +858,160 @@ body.dark .contact-info {
   }
 }
 
+/* ===============================
+   ONLINE SEAT BOOKING (QR SECTION)
+================================ */
+
+.library-qr {
+  max-width: 500px;
+  margin: 50px -13PX auto;
+  padding: 35px 25px;
+  text-align: center;
+  background: #f8fafc;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.library-qr h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.library-qr p {
+  font-size: 15px;
+  color: #475569;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+/* QR IMAGE */
+.library-qr img {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  margin: 20px auto;
+  border-radius: 14px;
+  background: #ffffff;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+/* BUTTON */
+.library-btn {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 14px 28px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.library-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   MOBILE RESPONSIVE
+================================ */
+@media (max-width: 480px) {
+  .library-qr {
+    margin: 40px 15px;
+    padding: 28px 18px;
+  }
+
+  .library-qr h2 {
+    font-size: 20px;
+  }
+
+  .library-qr img {
+    width: 190px;
+    height: 190px;
+  }
+
+  .library-btn {
+    width: 100%;
+    padding: 14px;
+  }
+}/* ===============================
+   GOAL TEXT SECTION
+================================ */
+
+.goal-section {
+  max-width: 900px;
+  margin: 50px auto 30px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.goal-text {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #334155; /* calm dark slate */
+  font-weight: 400;
+}
+
+.goal-text strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+body.dark .goal-text {
+  color: lightblue;
+  
+}
+
+body.dark .goal-text strong {
+  color: red;
+}
+
+
+/* ===============================
+   MOBILE RESPONSIVE
+================================ */
+@media (max-width: 600px) {
+  .goal-text {
+    font-size: 15.5px;
+    line-height: 1.7;
+  }
+}
+
+
+.library-image-box {
+  max-width: 320px;
+  margin: 30px auto 50px;
+  text-align: center;
+}
+
+.library-image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  background: #ffffff;
+  padding: 10px;
+  box-shadow: 
+    0 12px 25px rgba(0, 0, 0, 0.25),
+    0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover effect (soft, professional) */
+.library-image-box img:hover {
+  transform: scale(1.03);
+  transition: 0.3s ease;
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .library-image-box {
+    max-width: 260px;
+  }
+}
 
 /* ===============================
    GOOGLE MAP SECTION
@@ -965,8 +1102,6 @@ body.dark .whatsapp-float {
   box-shadow: 0 8px 20px rgba(0,0,0,0.6);
 }
 
-
-
 /* ===============================
    FOOTER
 ================================ */
@@ -1023,11 +1158,6 @@ body.dark .whatsapp-float {
   color: white;
   padding: 10px;
   align-items: center;
-  border-radius: 50px;
-  border-color: #bea61e;
-  border-bottom: 2px solid chocolate;
-  box-shadow:  40px 10px  70px rgb(217, 255, 0);
-
   }
 
 
@@ -1043,7 +1173,5 @@ body.dark .whatsapp-float {
   font-size: 13px;
   opacity: 0.8;
 }
-
-
 
 

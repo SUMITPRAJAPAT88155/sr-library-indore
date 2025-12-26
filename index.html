@@ -18,6 +18,8 @@
   <link rel="canonical" href="https://www.srlibraryindore.com/" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <meta name="author" content="Sumit Prajapat">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
 
 
   <link rel="stylesheet" href="style.css" />
@@ -25,29 +27,72 @@
 
 <body>
 
-<!-- ================= HEADER ================= -->
-<header class="header">
-  <nav class="navbar">
-    <div class="navbar-inner">
+<!-- ================= HEADER ================= --><header class="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <div class="container">
 
-      <div class="logo-box">
-        <img src="logo-img/image-removebg-preview.png" alt="SR Library Logo">
-        <span class="logo-text">SR Library</span>
+      <!-- LOGO -->
+      <a class="navbar-brand d-flex align-items-center" href="#home">
+        <img 
+          src="logo-img/image-removebg-preview.png" 
+          alt="SR Library Logo" 
+          height="40"
+        >
+        <span class="ms-2 fw-bold">SR Library</span>
+      </a>
+
+      <!-- ✅ TOGGLE BUTTON (Mobile ke liye) -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- LINKS -->
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3">
+
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#facilities">Facilities</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">Gallery</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#pricing">Pricing</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+
+        </ul>
+
+        <!-- 🌙 DARK MODE BUTTON -->
+        <button 
+          id="dark-toggle" 
+          class="btn btn-outline-dark ms-lg-3"
+        >
+          🌙
+        </button>
       </div>
-
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#facilities">Facilities</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-
-      <button id="dark-toggle">🌙</button>
 
     </div>
   </nav>
 </header>
+
 
 <!-- ================= HERO ================= -->
 <section class="hero" id="home">
@@ -62,11 +107,20 @@
 
     <div class="hero-buttons">
       <a href="#contact" class="btn primary">Join Now</a>
-      <a href="#facilities" class="btn secondary">View Facilities</a>
+
+      <!-- ✅ NEW BUTTON (Library Portal) -->
+      <a 
+        href="https://app.managemylibrary.com/library?libId=68c92b9e635c3427c7bc3215&branchId=68c9333ce1109e662967acbe"
+        target="_blank"
+        class="btn primary"
+      >
+        📚 Book Seat Online
+      </a>
+
+      <a href="#facilities" class="btn primary">View Facilities</a>
     </div>
   </div>
 </section>
-
 <!-- ================= FACILITIES ================= -->
 <section class="facilities" id="facilities">
   <h2 class="section-title">Our Facilities</h2>
@@ -152,9 +206,9 @@
 
   </div>
 
-  <p class="offer-timer">
-    ⏰ Offer ends in <span id="timer">00:00:00</span>
-  </p>
+  <div class="offer-timer">
+  ⏰ Offer Ends In: <span id="countdown">Loading...</span>
+</div>
 
 </section>
 
@@ -163,24 +217,49 @@
 <!-- offer section end  -->
 
 <!-- ================= GALLERY ================= -->
-<section class="gallery" id="gallery">
-  <h2 class="section-title">Library Gallery</h2>
-  <p class="section-subtitle">Real photos of SR Library – peaceful study environment</p>
+<!-- ================= GALLERY ================= -->
+<section class="gallery py-5" id="gallery">
+  <div class="container">
 
-  <div class="gallery-grid">
-    <img src="galary-img/image1.png" alt="Library Image 1">
-    <img src="galary-img/image2.png" alt="Library Image 2">
-    <img src="galary-img/image3.png" alt="Library Image 3">
-    <!-- <img src="galary-img/new imge3.jpg" alt="Library Image 4"> -->
-    <img src="galary-img/newimg4.jpg" alt="Library Image 5">
-    <img src="galary-img/newimg2.jpg" alt="Library Image 6">
+    <h2 class="text-center fw-bold mb-2">Library Gallery</h2>
+    <p class="text-center text-muted mb-4">
+      Real photos of SR Library – peaceful study environment
+    </p>
+
+    <div class="row g-3">
+
+      <div class="col-lg-3 col-md-4">
+        <img src="galary-img/image1.png" class="img-fluid rounded shadow gallery-img" alt="Library Image 1">
+      </div>
+
+      <div class="col-lg-3 col-md-4">
+        <img src="galary-img/image2.png" class="img-fluid rounded shadow gallery-img" alt="Library Image 2">
+      </div>
+
+      <div class="col-lg-3 col-md-4">
+        <img src="galary-img/image3.png" class="img-fluid rounded shadow gallery-img" alt="Library Image 3">
+      </div>
+
+      <div class="col-lg-3 col-md-4">
+        <img src="galary-img/newimg4.jpg" class="img-fluid rounded shadow gallery-img" alt="Library Image 4">
+      </div>
+
+      <div class="col-lg-3 col-md-4">
+        <img src="galary-img/newimg2.jpg" class="img-fluid rounded shadow gallery-img" alt="Library Image 5">
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <img src="galary-img/newimg2.jpg" class="img-fluid rounded shadow gallery-img" alt="Library Image 5">
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <img src="galary-img/newimg2.jpg" class="img-fluid rounded shadow gallery-img" alt="Library Image 5">
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <img src="galary-img/newimg2.jpg" class="img-fluid rounded shadow gallery-img" alt="Library Image 5">
+      </div>
+
+
+    </div>
   </div>
-  <!-- 🔍 Lightbox -->
-<div class="lightbox" id="lightbox">
-  <span class="close">&times;</span>
-  <img id="lightboxImg" alt="Full View">
-</div>
-
 </section>
 
 <!-- ================= PRICING ================= -->
@@ -298,17 +377,78 @@
       <a href="https://wa.me/919244140220" target="_blank" class="contact-btn whatsapp">
         💬 WhatsApp
       </a>
+      
+<!-- ================= ONLINE SEAT / QR ================= -->
+<section class="library-qr">
+  <h2>📲 Online Seat Booking</h2>
+
+  <img src="SR-QR/NEWQRAD.jpg" alt="SR Library QR Code">
+
+  <p>
+    QR scan kare ya niche button par click karke
+    apni seat online book kare.
+  </p>
+
+  <a 
+    href="https://app.managemylibrary.com/library?libId=68c92b9e635c3427c7bc3215&branchId=68c9333ce1109e662967acbe"
+    target="_blank"
+    class="library-btn"
+  >
+📚 Book Your Seat Online  </a>
+</section>
     </div>
 
     <!-- Contact Form -->
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="tel" placeholder="Mobile Number" required>
-      <textarea placeholder="Your Message"></textarea>
-      <button type="submit">Send Enquiry</button>
-    </form>
+<form class="contact-form" id="contact-form">
 
+  <input 
+    type="text" 
+    id="name" 
+    placeholder="Your Name" 
+    required
+  >
+
+  <input 
+    type="tel" 
+    id="phone" 
+    placeholder="Mobile Number" 
+    required
+  >
+
+  <textarea 
+    id="message" 
+    placeholder="Your Message">
+  </textarea>
+
+  <button type="submit">Send Enquiry</button>
+  <section class="goal-section">
+    <section class="library-image-section">
+  <div class="library-image-box">
+    <img 
+      src="CONTAC-IMGP/GIRS-IMGSR.png" 
+      alt="SR Library Study Environment"
+    >
   </div>
+</section>
+
+  <p class="goal-text">
+    A focused and disciplined study environment plays a crucial role in achieving any goal.
+    At <strong>SR Library</strong>, students get a quiet, distraction-free space that supports
+    long study hours, consistency, and deep concentration.
+    This structured environment helps aspirants stay motivated, follow a routine,
+    and move steadily closer to their academic and competitive exam goals.
+  </p>
+</section>
+
+
+</form><!-- ================= CONTACT ================= -->
+
+  
+  <!-- aapka existing contact content -->
+</section>
+
+
+
 </section>
 <section class="map-section" id="location">
   <h2 class="section-title">Our Location</h2>
@@ -334,6 +474,7 @@
     class="map-btn">
     📍 Get Directions
   </a>
+
 </section>
 
 
@@ -387,6 +528,8 @@
 
 
 <!-- ================= JS ================= -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 <script src="script.js"></script>
 
 </body>
