@@ -765,6 +765,108 @@ body.dark .price-note {
 }
 
 
+/* ================= ACHIEVE GOALS ================= */
+.achieve-section {
+  padding: 100px 20px;
+  background: #f8fafc;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  
+}
+
+.section-title {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #475569;
+  margin-top: 8px;
+  margin-bottom: 50px;
+}
+
+.achiever-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.achiever-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.achiever-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.achiever-card img {
+  width: 200px;
+  height: 250px;
+  border-radius: 20%;
+  object-fit: cover;
+  border: 4px solid #38bdf8;
+  margin-bottom:20px;
+  padding: 1px;
+}
+
+.achiever-card h3 {
+  font-size: 18px;
+  color: #020617;
+  margin-bottom: 6px;
+}
+
+.achiever-card span {
+  font-size: 14px;
+  color: #0ea5e9;
+  font-weight: 600;
+}
+/* ================= ACHIEVE GOALS : DARK MODE ================= */
+body.dark .achieve-section {
+  background: #020617;
+}
+
+body.dark .section-title {
+  color: #e5e7eb;
+}
+
+body.dark .section-subtitle {
+  color: #94a3b8;
+}
+
+body.dark .achiever-card {
+  background: #0f172a;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+body.dark .achiever-card:hover {
+  box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+}
+
+body.dark .achiever-card h3 {
+  color: #f8fafc;
+}
+
+body.dark .achiever-card span {
+  color: #38bdf8;
+}
+
+body.dark .achiever-card img {
+  border-color: #38bdf8;
+}
+
+
 /* ===============================
    CONTACT SECTION
 ================================ */
